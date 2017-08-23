@@ -1,5 +1,7 @@
 def fib():
-    res = [0, 1]
-    for i in range(2, 1000):
-        res.append(res[i-2] + res[i-1])
-        yield res[i]
+    base_num = [0, 1]
+    while True:
+        fibonacci_num = sum(base_num)
+        yield fibonacci_num
+        base_num.pop(0)
+        base_num.append(fibonacci_num)
