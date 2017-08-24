@@ -1,7 +1,6 @@
 def fib():
-    base_num = [0, 1]
+    a, b = 0, 1
     while True:
-        fibonacci_num = sum(base_num)
+        fibonacci_num = a + b
         yield fibonacci_num
-        base_num.pop(0)
-        base_num.append(fibonacci_num)
+        a, b = b, fibonacci_num
